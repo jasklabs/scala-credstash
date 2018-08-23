@@ -1,10 +1,6 @@
-import scalariform.formatter.preferences._
-import com.typesafe.sbt.SbtScalariform
-import com.typesafe.sbt.SbtScalariform.ScalariformKeys
-
 name := "scala-credstash"
 version := "1.01"
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.6"
 organization := "io.policarp"
 homepage := Some(url("https://github.com/kdrakon/scala-credstash"))
 scmInfo := Some(
@@ -24,10 +20,6 @@ libraryDependencies ++= Seq(
   "org.mockito" % "mockito-core" % "1.10.19" % "test"
 )
 
-SbtScalariform.scalariformSettings
-
-ScalariformKeys.preferences := ScalariformKeys.preferences.value
-  .setPreference(AlignParameters, true)
 
 pomIncludeRepository := { _ => false }
 publishMavenStyle := true
